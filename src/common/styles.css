@@ -9,11 +9,11 @@ body {
     overflow-y: hidden;
     width: 100vw;
     height: 100vh;
-    background: black;
-    color: #ccc;
-    font-weight: 400;
-    font-size: 2.3vw;
-    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #232323;
+    color: #FBFBFB;
+    font-weight: 200;
+    font-size: 2.0vw;
+    font-family: 'Lato Light', sans-serif;
 }
 
 h1,
@@ -21,6 +21,7 @@ h2,
 h3 {
     display: inline;
     font-size: 1em;
+    font-family: 'Montserrat Bold', sans-serif;
 }
 
 h1,
@@ -33,7 +34,7 @@ h2 {
 }
 
 a {
-    color: #ccc;
+    color: #FBFBFB;
 }
 
 ul li {
@@ -90,7 +91,7 @@ p {
 
 figure {
     height: 100%;
-    background-color: black;
+    background-color: #232323;
 }
 
 div#main {
@@ -113,33 +114,39 @@ div#main {
 
 #main .location {
     width: 30%;
+    text-align: right;
 }
 
 div#program {
-    height: 65%;
+    border-top: 50px;
+    height: 75%;
 }
 
 div#note {
-    height: 15%;
+    height: 20%;
     text-align: center;
 }
 
 div#info {
-    height: 20%;
+    height: 5%;
 }
 
 div#logo {
-    margin-right: 0.4em;
-    width: auto;
-    height: 100%;
+    /* margin-right: 0.4em; */
+    margin: auto;
+    width: 40%;
+    /* height: 30%; */
+
+
 }
 
 #logo img {
-    height: 100%;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 div#info div {
-    display: inline-block;
+    /* display: inline-block; */
     vertical-align: top;
     font-size: 3.5vh;
 }

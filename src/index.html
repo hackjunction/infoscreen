@@ -8,7 +8,9 @@
     <meta name="description" content="">
     <meta http-equiv="Cache-Control" content="no-store" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&amp;subset=latin-ext" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&amp;subset=latin-ext" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:200,300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,700,900" rel="stylesheet">
     <link rel="stylesheet" href="common/styles.css">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.2/lodash.min.js" integrity="sha256-Cv5v4i4SuYvwRYzIONifZjoc99CkwfncROMSWat1cVA=" crossorigin="anonymous"></script>
@@ -25,12 +27,12 @@
                 <div id="note"></div>
                 <div id="info">
                     <div id="logo">
-                        <img alt="LOGO" />
+                        <img src="common/junction_logo-1.png"alt="LOGO" />
                     </div>
-                    <div>
+<!--                    <div>
                         <p>General info here</p>
                         <p>github.com/Blizzara/infoscreen</p>
-                    </div>
+</div> -->
                 </div>
             </div>
             <div class="right" id="image">
@@ -171,10 +173,10 @@
         var MIN = 60 * SEC;
 
         // PARTNER CHANGE
-        setInterval(swapImages, 10 * SEC);
+        setInterval(swapImages, 100 * SEC);
 
         // CONTENT SWITCH
-        slideshow.start(20 * SEC);
+        slideshow.start(2000 * SEC);
         // CONTENT UPDATE AT CYLCE END!
 
         // TOTAL REFRESH
