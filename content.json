@@ -11,7 +11,7 @@
         { "start": "2018-11-26 19:00 GMT+2", "end": "2018-11-26 23:59 GMT+2", "event": "Afterparty", "location": "Servin Mökki" }
     ],
     "notes": [
-        { "start": "2017-11-25 15:00 GMT+2", "end": "2017-11-25 17:59 GMT+2", "text": "Keynotes starting at 15:30 at the Keynote Stage (1st floor)!" }
+        { "start": "2017-11-25 15:00 GMT+2", "end": "2020-11-25 17:59 GMT+2", "text": "Add additional info in the 'notes' section in content.json. Notes are only shown during the time allocated." }
     ],
     "figures": [{
             "start": "2016-01-01 12:00 GMT+2",
@@ -21,12 +21,7 @@
         {
             "start": "2016-01-01 12:00 GMT+2",
             "end": "2026-01-01 12:00 GMT+2",
-            "html": "<div style='font-size: 1.8em;' class='centered'><span style='margin:auto;'>Devpost instructions: live.hackjunction.com/devpost<br><br>Demo expo instructions: live.hackjunction.com/demo-expo</span></div>"
-        },
-        {
-            "start": "2016-01-01 12:00 GMT+2",
-            "end": "2026-01-01 12:00 GMT+2",
-            "html": "<div style='font-size: 1.8em;' class='centered'><span style='margin:auto;'>Fire alarm was caused by a faulty detector.<br><br>Submission deadline and stage program postponed by one hour.<br><br><div style='text-decoration:underline'>New submission deadline: 11.00</div></span></div>"
+            "html": "<div style='font-size: 1.8em;' class='centered'><span style='margin:auto;'>Write slides in content.json file<br><br>Slides are written in <b>HTML</b></span></div>"
         }
     ]
 }
