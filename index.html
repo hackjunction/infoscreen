@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Infoscreen</title>
     <meta name="description" content="">
-    <meta http-equiv="Cache-Control" content="no-store" />
+    <meta http-equiv="cache-control" content="no-store" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&amp;subset=latin-ext" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css?family=Lato:200,300,400" rel="stylesheet">
@@ -19,23 +19,16 @@
 <body>
     <div id="figures" class="slideshow" tabindex="1" autofocus="autofocus">
         <figure>
-            <div class="left" id="main">
+            <div id="main">
                 <div id="program">
                     <ul id="programlist">
                     </ul>
                 </div>
                 <div id="note"></div>
-                <div id="info">
-                    <div id="logo">
-                        <img src="common/junction_logo-1.png"alt="LOGO" />
-                    </div>
-<!--                    <div>
-                        <p>General info here</p>
-                        <p>github.com/Blizzara/infoscreen</p>
-</div> -->
+                <div id="logo">
+                    <img id="junction_logo" src="common/junction_logo-1.png" alt="LOGO" />
+                    <img id="sun_fx_logo" src="common/sun-effects_white.png" alt="LOGO" />
                 </div>
-            </div>
-            <div class="right" id="image">
             </div>
         </figure>
     </div>
@@ -81,7 +74,7 @@
 
         var slideshow = new SlideShow('.slideshow');
 
-        var NUM_OF_EVENTS = 5;
+        var NUM_OF_EVENTS = 7;
 
         function formatDate(str) {
             return str.split(' ')[1];
@@ -89,6 +82,14 @@
 
         function printEvents(events) {
             $('#programlist').empty();
+
+            var li = $('<li id="sched_header"></li>');
+            var time = $('<span class="time" style="font-weight:700;">Time</span>');
+            var event = $('<span class="event" style="font-weight:700;">Event</span>');
+            var location = $('<span class="location" style="font-weight:700;">Location</span>');
+            li.append(time, event, location);
+            $('#programlist').append(li);
+
             events.forEach((e) => {
                 var li = $('<li></li>');
                 var time = $('<span class="time"></span>').text(formatDate(e.start));
@@ -110,7 +111,7 @@
             $('.auto').remove();
             figures.forEach((f) => {
                 var figure = $('<figure class="auto"></figure>');
-                figure.append(f.html);
+                figure.append(f.html + '<div id="logo"><img id="junction_logo" src="common/junction_logo-1.png"alt="LOGO" /><img id="sun_fx_logo" src="common/sun-effects_white.png"alt="LOGO" /></div>');
                 $('#figures').append(figure);
             });
             slideshow.reset();
@@ -147,16 +148,9 @@
             });
         }
 
-        var image = 0;
-
-        function swapImages() {
-            image = image == 1 ? 2 : 1;
-            $('#image').css("background-image", "url(img" + image + ".jpg)");
-        }
-
         function reload() {
             $.ajax({
-                url: '../log.php?url=' + location.pathname,
+                url: 'log.php?url=' + location.pathname,
                 type: 'GET',
                 cache: 'false',
                 success: function(response) {
@@ -166,17 +160,13 @@
         }
 
         // INIT
-        swapImages();
         getAndUpdateContent();
 
         var SEC = 1000;
         var MIN = 60 * SEC;
 
-        // PARTNER CHANGE
-        setInterval(swapImages, 100 * SEC);
-
         // CONTENT SWITCH
-        slideshow.start(2000 * SEC);
+        slideshow.start(20 * SEC);
         // CONTENT UPDATE AT CYLCE END!
 
         // TOTAL REFRESH

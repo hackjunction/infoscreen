@@ -12,15 +12,21 @@ body {
     background-color: #232323;
     color: #FBFBFB;
     font-weight: 200;
-    font-size: 2.0vw;
+    font-size: 1.6vw;
     font-family: 'Lato Light', sans-serif;
+}
+
+#main {
+    padding: 1.7em;
+    height: 100%;
+    width: 100%;
 }
 
 h1,
 h2,
 h3 {
     display: inline;
-    font-size: 1em;
+    /*font-size: 1em;*/
     font-family: 'Montserrat Bold', sans-serif;
 }
 
@@ -38,7 +44,7 @@ a {
 }
 
 ul li {
-    margin-bottom: 0.5em;
+    padding: 0.6em;
     list-style-type: none;
 }
 
@@ -46,13 +52,6 @@ p {
     margin-top: 0.5em;
 }
 
-.left {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 100%;
-}
 
 .slideshow {
     position: relative;
@@ -79,24 +78,12 @@ p {
     z-index: 2;
 }
 
-.right {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 50%;
-    height: 100%;
-    background-size: 100%;
-    background-repeat: no-repeat;
-}
 
 figure {
     height: 100%;
     background-color: #232323;
 }
 
-div#main {
-    padding: 1em;
-}
 
 #main span {
     display: inline-block;
@@ -105,7 +92,6 @@ div#main {
 
 #main .time {
     width: 15%;
-    font-weight: 700;
 }
 
 #main .event {
@@ -114,56 +100,72 @@ div#main {
 
 #main .location {
     width: 30%;
-    text-align: right;
+}
+
+ul#programlist {
+  padding-left: 4em;
+  padding-right: 4em;
+}
+
+#programlist li {
+    padding: 0.5em;
+    padding-left: 1em;
+}
+
+
+#sched_header {
+    color: #35E2DF;
+    border-bottom: 2px solid;
+    text-transform:uppercase;
+    font-family: 'Montserrat'
 }
 
 div#program {
-    border-top: 50px;
-    height: 75%;
+    height: 70%;
 }
 
 div#note {
+    font-size: 1.5em;
     height: 20%;
+    padding-top: em;
     text-align: center;
 }
 
-div#info {
-    height: 5%;
-}
-
 div#logo {
-    /* margin-right: 0.4em; */
+    height: 10%;
     margin: auto;
-    width: 40%;
-    /* height: 30%; */
-
-
+    width: 50%;
 }
 
 #logo img {
     max-height: 100%;
-    max-width: 100%;
+    max-width: 50%;
 }
 
-div#info div {
-    /* display: inline-block; */
-    vertical-align: top;
-    font-size: 3.5vh;
+#junction_logo {
+    padding-right: 1em;
+    padding-left: 2em;
+    padding-bottom: 0.5em;
+}
+
+#sun_fx_logo {
+    padding-left: 5em;
 }
 
 div.centered {
     display: table;
     padding: 1em;
     width: 100%;
-    height: 100%;
+    height: 83%;
 }
 
 div.centered span {
     display: table-cell;
     vertical-align: middle;
-    text-align: center;
+    text-align: center
 }
 
 li {
     text-overflow: ellipsis;
+    border-bottom: 2px solid;
 }
